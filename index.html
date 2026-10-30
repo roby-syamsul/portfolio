@@ -209,7 +209,7 @@ nav ul.open{display:flex}nav li{padding:.55rem 0}}
       <div class="tags"><span>Manual Testing</span><span>Test Case</span><span>Bug Reporting</span></div>
       <p class="d">Menyusun dan menjalankan test case positif serta negatif untuk memeriksa fungsionalitas aplikasi web. Membandingkan hasil aktual dengan expected result dan mendokumentasikan temuan pengujian agar mudah ditindaklanjuti.</p>
       <div class="acts"><button class="btn sm" aria-expanded="false" aria-controls="d1">Lihat Detail</button></div>
-      <div class="detail" id="d1" hidden><p>Aplikasi yang diuji: OrangeHRM (Login, PIM, Leave).</p><ul><li><span><a class="doc" href="https://drive.google.com/drive/folders/1MaONZYfWIVNN_mtD2yAAfibBS7h22pcw?usp=sharing" target="_blank" rel="noopener">Test Case &amp; Bug Report ↗</a></span></li></ul><p>Folder berisi Test Scenario, Test Case, dan Bug Report.</p></div>
+      <div class="detail" id="d1" hidden><p>Aplikasi yang diuji: OrangeHRM (Login, Admin, PIM, Recruitment, Directory).</p><ul><li><span><a class="doc" href="https://drive.google.com/drive/folders/1MaONZYfWIVNN_mtD2yAAfibBS7h22pcw?usp=sharing" target="_blank" rel="noopener">Test Case &amp; Bug Report ↗</a></span></li></ul><p>Folder berisi Test Scenario, Test Case, dan Bug Report.</p></div>
     </div></article>
     <article class="card proj"><div class="art a3">Automation Testing<br>dengan Cypress</div><div class="pb">
       <div class="tags"><span>Cypress</span><span>JavaScript</span><span>Automation Testing</span></div>
@@ -339,14 +339,14 @@ addEventListener("scroll",function(){if(!tk)tk=requestAnimationFrame(go)},{passi
 var U={docs:"https://drive.google.com/drive/folders/1MaONZYfWIVNN_mtD2yAAfibBS7h22pcw?usp=sharing"};
 function rp(k){return function(){return CONFIG.repos[k]}}
 var P=[
-{id:"manual-testing",t:["Manual","Testing"],c:"#e8461f,#ff9a5c",st:["ok","Dokumentasi tersedia"],lead:"Memeriksa fungsionalitas aplikasi web lewat test case positif dan negatif.",b:"Menyusun dan menjalankan test case positif serta negatif untuk memeriksa fungsionalitas aplikasi web. Membandingkan hasil aktual dengan expected result dan mendokumentasikan temuan pengujian agar mudah ditindaklanjuti.",m:[["Peran","Penguji (QA)"],["Aplikasi diuji","OrangeHRM (Login, PIM, Leave)"],["Fokus","Manual Testing, Test Case, Bug Reporting"],["Tools","Manual Testing"]],d:[{l:"Test Case & Bug Report",u:U.docs}]},
+{id:"manual-testing",t:["Manual","Testing"],c:"#e8461f,#ff9a5c",st:["ok","Dokumentasi tersedia"],lead:"Memeriksa fungsionalitas aplikasi web lewat test case positif dan negatif.",b:"Menyusun dan menjalankan test case positif serta negatif untuk memeriksa fungsionalitas aplikasi web. Membandingkan hasil aktual dengan expected result dan mendokumentasikan temuan pengujian agar mudah ditindaklanjuti.",m:[["Peran","Penguji (QA)"],["Aplikasi diuji","OrangeHRM (Login, Admin, PIM, Recruitment, Directory)"],["Fokus","Manual Testing, Test Case, Bug Reporting"],["Tools","Manual Testing"]],d:[{l:"Test Case & Bug Report",u:U.docs}]},
 {id:"automation-cypress",t:["Automation","Cypress"],c:"#8a3a1c,#e8a05c",st:["ok","Repository tersedia"],lead:"Mengotomasi skenario pengujian web dan API menggunakan Cypress.",b:"Membuat automated test untuk fitur Login OrangeHRM dan endpoint API kategori. Pengujian mencakup validasi status response dan isi response body. Source code tersedia di repository GitHub.",m:[["Peran","Penguji (QA)"],["Fokus","Cypress, JavaScript, Automation Testing"],["Tools","Cypress, JavaScript"]],d:[{l:"Repository GitHub",u:rp("cypress")}]}];
 var pg=document.getElementById("pg"),cur=-1,rows=document.querySelectorAll(".big .proj");
 function R(i){var d=P[i],n=P[(i+1)%P.length],av=0;
  var docs=d.d.map(function(x){var u=typeof x.u==="function"?x.u():x.u;if(u)av++;return u?'<a class="pgdoc" href="'+u+'" target="_blank" rel="noopener">'+x.l+' ↗</a>':'<div class="pgdoc off">'+x.l+'<small>BELUM TERSEDIA</small></div>'}).join("");
  var meta=d.m.map(function(m){return"<dt>"+m[0]+"</dt><dd>"+m[1]+"</dd>"}).join("");
  pg.innerHTML='<div class="pgtop"><div class="pgbrand">Roby<br>S. Pajar</div><button class="pgback" data-close aria-label="Kembali ke daftar proyek">←</button></div>'
- +'<div class="pghero"><h2 class="pgtitle">'+d.t[0]+'<br>'+d.t[1]+'</h2><div class="pgimg" style="background:linear-gradient(145deg,'+d.c+')"><span>SCREENSHOT PROYEK MENYUSUL</span></div></div>'
+ +'<div class="pghero"><h2 class="pgtitle">'+d.t[0]+'<br>'+d.t[1]+'</h2></div>'
  +'<div class="pgcols"><div><p class="pglead">'+d.lead+'</p></div><div><p class="pgbody">'+d.b+'</p></div><dl class="pgmeta">'+meta+'</dl></div>'
  +'<h3 class="pgh">Dokumentasi pengujian</h3><div class="pgdocs">'+docs+'</div>'
  +'<button class="pgnext" data-next="'+((i+1)%P.length)+'"><small>PROYEK BERIKUTNYA</small><span>'+n.t[0]+' '+n.t[1]+' →</span></button>'}
